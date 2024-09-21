@@ -49,9 +49,9 @@ The model is trained for 150 epochs with a batch size of 32. We use the followin
 
 **Dependencies**
 
-TensorFlow/Keras
-NumPy
-Matplotlib
+- TensorFlow/Keras
+- NumPy
+- Matplotlib
 
 **Results**
 
