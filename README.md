@@ -12,10 +12,10 @@ Decoder: Reconstructs the image by progressively upsampling and concatenating en
 
 The output has 3 channels:
 
-The predicted image.
-The predicted real mask.
-The difference mask.
-Custom Loss Function
+- The predicted image.
+- The predicted real mask.
+- The difference mask.
+- Custom Loss Function
 
 The model uses a custom loss function based on Root Mean Squared Error (RMSE), which focuses on predicting the occluded regions of the image. Specifically, the first channel of y_true and y_pred (the original and predicted images) are compared only in the areas indicated by an artificial mask (third channel of y_true), guiding the model to learn and improve predictions in these regions.
 
