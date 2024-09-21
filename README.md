@@ -29,24 +29,23 @@ The data used in this project is from the MODIS dataset, specifically nightly da
 The data is split into input (batch_x) and output (batch_y) batches:
 
 batch_x contains:
-The masked image.
-The artificial mask.
-The land-sea mask.
-The tuned baseline.
+- The masked image,
+- The artificial mask,
+- The land-sea mask,
+- The tuned baseline.
+
 batch_y contains:
-The actual image.
-The real mask.
-The difference mask.
+- The actual image,
+- The real mask,
+- The difference mask.
 
 **Training**
 
 The model is trained for 150 epochs with a batch size of 32. We use the following callbacks:
 
-ModelCheckpoint: Saves the best model based on validation loss.
-EarlyStopping: Stops training if validation loss does not improve for 10 epochs.
-ReduceLROnPlateau: Reduces the learning rate when the model's performance plateaus.
-
-python train.py
+- ModelCheckpoint: Saves the best model based on validation loss.
+- EarlyStopping: Stops training if validation loss does not improve for 10 epochs.
+- ReduceLROnPlateau: Reduces the learning rate when the model's performance plateaus.
 
 **Dependencies**
 
